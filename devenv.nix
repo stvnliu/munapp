@@ -9,7 +9,7 @@
 
 # https://devenv.sh/scripts/
 	scripts.hello.exec = "echo hello from $GREET";
-
+  cachix.enable = false;
 	enterShell = ''
 		hello
 		git --version
