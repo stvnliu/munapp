@@ -1,0 +1,8 @@
+{
+	"countries": [
+		{"name": "United States of America", "ident": "usa"},
+		{"name": "People's Republic of China", "ident": "chn"},
+		{"name": "Germany", "ident": "ger"},
+		{"name": "Russian Federation", "ident": "rus"}
+	]
+}
