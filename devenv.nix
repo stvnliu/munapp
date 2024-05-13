@@ -2,10 +2,14 @@
 
 {
 # https://devenv.sh/basics/
-	env.GREET = "devenv";
-
+  env = {
+		GREET = "devenv";
+		CARGO_TARGET_X86_64_UNKNOWN_LINUX_GNU_LINKER = "${pkgs.llvmPackages.clangUseLLVM}/bin/clang";
+		#CARGO_ENCODED_RUSTFLAGS = "-Clink-arg=-fuse-ld=${pkgs.mold}/bin/mold";
+		LD_LIBRARY_PATH = "${pkgs.ncurses}/lib:$LD_LIBRARY_PATH";
+	};
 # https://devenv.sh/packages/
-	packages = [ pkgs.git ];
+	packages = [ pkgs.git pkgs.ncurses];
 
 # https://devenv.sh/scripts/
 	scripts.hello.exec = "echo hello from $GREET";
