@@ -1,14 +1,11 @@
 mod structs;
 
-
 use std::fs::File;
 use std::io::Read;
 use cursive::CursiveRunnable;
-use cursive::*;
 use cursive::view::*;
 use cursive::views::*;
 use structs::CountryData;
-use structs::Country;
 fn show_clist(s: &mut CursiveRunnable, cdata: CountryData) {
     let countries = cdata.countries;
     let mut countries_view = ListView::new();
